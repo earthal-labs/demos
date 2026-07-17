@@ -8,7 +8,7 @@ on:
       base:
         required: false
         type: string
-        default: ""   # falls back to /<slug>/
+        default: ""   
     secrets:
       DEMOS_DEPLOY_TOKEN:
         required: true
@@ -17,7 +17,7 @@ jobs:
   build-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4        # checks out the *calling* template repo
+      - uses: actions/checkout@v4        
       - uses: oven-sh/setup-bun@v2
       - name: Build
         env:
@@ -33,5 +33,5 @@ jobs:
           publish_branch: main
           publish_dir: ./dist
           destination_dir: ${{ inputs.slug }}
-          keep_files: true               # don't clobber other templates' folders
+          keep_files: true               
           commit_message: "deploy: ${{ github.repository }}@${{ github.sha }}"
