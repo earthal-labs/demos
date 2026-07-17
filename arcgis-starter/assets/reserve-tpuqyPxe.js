@@ -1,0 +1,1 @@
+import{t as e}from"./request-DC7EtbM4.js";import{i as t,n,r}from"./utils-OoAFrSy7.js";import{t as i}from"./EditUnitIdentifiersResult-C-F6Hrpx.js";async function a(a,o,s){let c=n(a),l={...o.toJSON(),f:`json`},u=r(t({...c.query,...l}),{...s,method:`post`,authMode:`no-prompt`}),{data:d}=await e(`${c.path}/unitIdentifiers/reserve`,u);return i.fromJSON(d)}export{a as reserve};

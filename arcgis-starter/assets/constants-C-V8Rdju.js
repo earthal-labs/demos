@@ -1,0 +1,1 @@
+import{t as e}from"./SpatialReference-CH13C8rO.js";import{m as t}from"./Extent-D4Pn61nT.js";var n=new t({x:0,y:0,z:0,spatialReference:e.WebMercator}),r=1e3,i=.3515625;export{n,r,i as t};
