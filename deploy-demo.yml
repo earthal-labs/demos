@@ -1,0 +1,37 @@
+name: Deploy demo
+on:
+  workflow_call:
+    inputs:
+      slug:
+        required: true
+        type: string
+      base:
+        required: false
+        type: string
+        default: ""   # falls back to /<slug>/
+    secrets:
+      DEMOS_DEPLOY_TOKEN:
+        required: true
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4        # checks out the *calling* template repo
+      - uses: oven-sh/setup-bun@v2
+      - name: Build
+        env:
+          DEMO_BASE: ${{ inputs.base != '' && inputs.base || format('/{0}/', inputs.slug) }}
+        run: |
+          bun install --frozen-lockfile
+          bun run build
+      - name: Publish to demos repo
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          personal_token: ${{ secrets.DEMOS_DEPLOY_TOKEN }}
+          external_repository: earthal-labs/demos
+          publish_branch: main
+          publish_dir: ./dist
+          destination_dir: ${{ inputs.slug }}
+          keep_files: true               # don't clobber other templates' folders
+          commit_message: "deploy: ${{ github.repository }}@${{ github.sha }}"
