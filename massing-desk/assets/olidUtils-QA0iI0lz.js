@@ -1,0 +1,1 @@
+import{j as e}from"./Error-CRbw7BxE.js";function t(){return!!e(`enable-feature:objectAndLayerId-rendering`)}export{t};

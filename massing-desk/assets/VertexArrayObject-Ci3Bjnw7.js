@@ -1,0 +1,1 @@
+import{n as e}from"./VertexBuffer-B8PzDISj.js";var t=class extends e{};export{t};

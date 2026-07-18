@@ -1,0 +1,1 @@
+import"./mat4-BL30OFHW.js";import"./mat4f64-E_FXCKxO.js";import"./glsl-D85RBwKC.js";import"./ShaderBuilder-DEBj6tn_.js";import{n as e}from"./Stars.glsl-Hkx7zRYM.js";export{e as build};

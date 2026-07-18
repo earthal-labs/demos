@@ -1,0 +1,3 @@
+import{n as e}from"./glsl-D85RBwKC.js";import{t}from"./ScreenSpacePass.glsl-9L-_X5OK.js";import{t as n}from"./ShaderBuilder-DEBj6tn_.js";import{t as r}from"./EmissionDimming.glsl-Ck8FkUFl.js";import{n as i}from"./oitBlendFragment.glsl-CmqsnhFp.js";function a(a){let o=new n;o.include(t);let{fragment:s,outputs:c}=o;return c.add(`fragEmission`,`vec4`,1),s.include(i,a),s.include(r,a),s.main.add(e`vec4 transparentColor = oitBlendFragment();
+vec3 dimming = emissionDimming(transparentColor.rgb, transparentColor.a);
+fragEmission = vec4(dimming, 0.0);`),o}var o=Object.freeze(Object.defineProperty({__proto__:null,build:a},Symbol.toStringTag,{value:`Module`}));export{o as n,a as t};

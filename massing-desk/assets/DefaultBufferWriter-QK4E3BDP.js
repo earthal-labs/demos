@@ -1,0 +1,1 @@
+import{d as e}from"./Geometry-BVxOrqrs.js";var t=class{constructor(e){this.layout=e}elementCount(e){return e.get(`position`).indices.length}write(t,n,r,i,a){e(r,i,this.layout,t,n,a)}};export{t};
