@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="fire" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#ff6b35"/>
+      <stop offset="50%" style="stop-color:#f7931e"/>
+      <stop offset="100%" style="stop-color:#ffc107"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#fire)" d="M50 5c0 0-25 30-25 55c0 20 15 35 25 35s25-15 25-35c0-25-25-55-25-55zm0 75c-8 0-15-10-15-20c0-15 10-30 15-38c5 8 15 23 15 38c0 10-7 20-15 20z"/>
+  <ellipse cx="50" cy="70" rx="8" ry="12" fill="#fff3cd" opacity="0.8"/>
+</svg>
