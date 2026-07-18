@@ -1,0 +1,1 @@
+import"./apiConverter-Dyc4hGMR.js";import{i as e,n as t,r as n}from"./labelPointOperator-BJJaExzR.js";export{n as execute,e as executeMany,t as supportsCurves};

@@ -1,0 +1,1 @@
+import{_ as e,g as t,v as n,w as r}from"./runtime-BlbtRSOo.js";var i=e(class extends n{constructor(){super(...arguments),this.key=r}render(e,t){return this.key=e,t}update(e,[n,r]){return n!==this.key&&(t(e),this.key=n),r}});export{i as t};
