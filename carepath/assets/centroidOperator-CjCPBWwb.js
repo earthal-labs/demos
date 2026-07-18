@@ -1,0 +1,1 @@
+import"./apiConverter-Bj064QWR.js";import{n as e,t}from"./centroidOperator-DaGOiNF3.js";export{e as execute,t as supportsCurves};

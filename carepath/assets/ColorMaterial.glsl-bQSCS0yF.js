@@ -1,0 +1,8 @@
+import{r as e}from"./Uniform-DbW1Stte.js";import{t}from"./ShaderBuilder-CGRMmuSM.js";import{r as n}from"./Slice.glsl-CyUIov5k.js";import{t as r}from"./ObjectAndLayerIdColor.glsl-KoN2h-A7.js";import{t as i}from"./VisualVariables.glsl-CrPIwUVO.js";import{t as a}from"./Float4PassUniform-BK2Jlamx.js";import{c as o,o as s,t as c}from"./OutputColorHighlightOLID.glsl-nI0MTdxz.js";import{t as l}from"./Transform.glsl-iLLevyFN.js";import{t as u}from"./VertexColor.glsl-DtG4gGL2.js";function d(d){let f=new t,{vertex:p,fragment:m,attributes:h,varyings:g}=f,{hasVVColor:_,hasVertexColors:v}=d;return h.add(`position`,`vec3`),p.inputs.add(`position`,()=>`position`),o(p,d),f.include(l),f.include(u,d),f.include(i,d),f.include(r,d),m.include(n,d),f.include(c,d),_&&h.add(`colorFeatureAttribute`,`float`),v||g.add(`vColor`,`vec4`),g.add(`vpos`,`vec3`,{invariant:!0}),p.uniforms.add(new a(`uColor`,e=>e.color)),p.main.add(e`
+      vpos = position;
+      forwardVertexColor();
+      forwardObjectAndLayerIdColor();
+
+      ${v?`vColor *= uColor;`:_?`vColor = uColor * interpolateVVColor(colorFeatureAttribute);`:`vColor = uColor;`}
+      gl_Position = transformPosition(proj, view, vpos);`),m.include(s),m.main.add(e`discardBySlice(vpos);
+outputColorHighlightOLID(applySlice(vColor, vpos), vColor.rgb);`),f}var f=Object.freeze(Object.defineProperty({__proto__:null,build:d},Symbol.toStringTag,{value:`Module`}));export{d as n,f as t};

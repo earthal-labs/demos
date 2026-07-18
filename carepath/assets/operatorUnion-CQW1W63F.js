@@ -1,0 +1,1 @@
+import"./Point2D-CcK71URB.js";import"./MultiPathImpl-L6yoyu-j.js";import{Q as e}from"./SpatialReference-DU9XduuV.js";import{t}from"./SimpleGeometryCursor-Bz9Gb7aZ.js";var n=new e;function r(e,t,r){return n.execute(e,t,r,null)}function i(e,r){return n.executeMany(new t(e),r,null).next()}function a(){return n.supportsCurves()}export{r as n,i as r,a as t};
