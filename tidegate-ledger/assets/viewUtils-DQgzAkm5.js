@@ -1,0 +1,1 @@
+import"./vec2-CRDTdDt5.js";import{s as e}from"./vec3f64-CkQiQSMN.js";import{a as t}from"./screenUtils-C9bCymEV.js";import{k as n}from"./vec3-BD0ipM_y.js";import{c as r}from"./elevationInfoUtils-w_MORPzJ.js";function i(t,i,o,s,c=e()){let l=n(a,t);return l[2]=r(s,l,i,o)||0,s.renderCoordsHelper.toRenderCoords(l,i,c),c}var a=e();t(),t();export{i as t};

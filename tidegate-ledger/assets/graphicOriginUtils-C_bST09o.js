@@ -1,0 +1,1 @@
+import{_ as e,f as t,g as n,p as r}from"./layerUtils-DhIQraLx.js";function i(e){return e&&`layer`in e?e.layer:void 0}function a(a){let o=i(a.origin);return e(o)?o=o.findSublayerForFeature(a):(t(o)||n(o))&&r(a.sourceLayer)&&(o=a.sourceLayer),o??a.sourceLayer??a.layer}export{a as t};
